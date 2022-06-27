@@ -44,7 +44,16 @@ Após criação do banco, basta executar o comando informado abaixo, ou rodar a 
 
 Esta API roda na porta 3030. Ela possui apenas um endpoint válido que é o de cadastro.
 
-Este endpoint encontra-se em http://localhost:3030/users/create onde é necessário realizar um POST e passar no body da requisição o nome, email, usuriologin e a senha
+### Os endpoints encontram-se:
+* http://localhost:3030/users/create
+	* Cadastrar um usuario
+* http://localhost:3030/users/list
+	* Listar um Usuario
+* http://localhost:3030//users/findById/:id
+	* Busca por um id especifico
+
+
+Abaixo segue um exemplo de uma requisição a ser passada atraves do body.
 
 Exemplo.:
 
