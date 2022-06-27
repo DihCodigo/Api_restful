@@ -34,5 +34,37 @@ module.exports = {
         
 
         return res.json(response)
+    },
+
+    async list(req, res) {
+        const response = {...responseModel}
+
+        const [rowsReturned] = await connection.query(`
+            SELECT * FROM usuario;
+        `)
+
+        if(rowsReturned) {
+            response.success = true
+            response.data = rowsReturned;
+        }
+        
+        return res.json(response)
+    },
+
+    async findById(req, res) {
+        const response = {...responseModel}
+        const idUser = req.params.id
+
+        console.log(idUser)
+
+        const [rowsReturned] = await connection.query(`
+            SELECT * FROM usuario WHERE id = ${idUser}`)
+
+        if(rowsReturned) {
+            response.success = true
+            response.data = rowsReturned;
+        }
+        
+        return res.json(response)
     }
 }

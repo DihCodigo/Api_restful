@@ -4,6 +4,9 @@ const { verifyToken } = require('./modules/jwt')
 const UserController = require('./controllers/UserController')
 
 router.post('/users/create', UserController.create)
+router.get('/users/list', UserController.list)
+router.get('/users/findById/:id', UserController.findById)
 router.post('/users/teste', verifyToken, (req, res) => res.json({ success: true, data: ["blz"] }))
+
 
 module.exports = router
