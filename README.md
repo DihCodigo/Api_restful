@@ -42,7 +42,7 @@ Após criação do banco, basta executar o comando informado abaixo, ou rodar a 
 
  `npm run dev`
 
-Esta API roda na porta 3030. Ela possui apenas um endpoint válido que é o de cadastro.
+Esta API roda na porta 3030. Ela possui quatros endpoints válidos.
 
 ### Os endpoints encontram-se:
 * http://localhost:3030/users/create
