@@ -27,9 +27,9 @@ Após baixar o banco de dados do MYSQL é necessário criar o banco de dados. Pa
 
 Para tal, executar o comando 
 # ---------------
-`CREATE DATABASE usuarios_db;`
-`use usuarios_db;`
-`create table usuario(
+`CREATE DATABASE usuarios_db;
+use usuarios_db;
+create table usuario(
 id int primary key auto_increment, 
 nome varchar(30), email varchar(50), usuariologin varchar(50), senha varchar(50),
 created_at datetime default now(),
@@ -51,7 +51,8 @@ Esta API roda na porta 3030. Ela possui apenas um endpoint válido que é o de c
 	* Listar um Usuario
 * http://localhost:3030//users/findById/:id
 	* Busca por um id especifico
-
+* http://localhost:3030//users/delete/:id
+	* Deletar por um id especifico
 
 Abaixo segue um exemplo de uma requisição a ser passada atraves do body.
 

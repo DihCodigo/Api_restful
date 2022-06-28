@@ -66,5 +66,22 @@ module.exports = {
         }
         
         return res.json(response)
+    },
+
+    async delete(req, res) {
+        const response = {...responseModel}
+        const idUser = req.params.id
+
+        console.log(idUser)
+
+        const [rowsReturned] = await connection.query(`
+            DELETE FROM usuario WHERE id = ${idUser}`)
+
+        if(rowsReturned) {
+            response.success = true
+            response.data = rowsReturned;
+        }
+        
+        return res.json(response)
     }
 }
