@@ -1,4 +1,4 @@
-# Teste técnico para candidatos desenvolvedores - Next
+# API RESTFUL
 
 
 Este projeto atua na criação de uma API Restful de cadastro de usuários. Cadastros de dados armazenados em um banco de dados relacional MYSQL.
